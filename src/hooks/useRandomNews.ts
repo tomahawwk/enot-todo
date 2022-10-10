@@ -9,8 +9,8 @@ export const useRandomNews = () => {
     'news',
     () => NewsService.getNews(), {
     onSuccess: (data:any) => {
-      const news = data.data.articles;
-      setRandomArticle(news[Math.floor(Math.random() * news.length)].description)
+      const news = data.data.response.results;
+      setRandomArticle(news[Math.floor(Math.random() * news.length)].webTitle)
     },
   })
 
