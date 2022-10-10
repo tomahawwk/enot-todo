@@ -1,0 +1,29 @@
+/* Modal */
+.modal-enter .overlay, .modal-exit.modal-exit-active .overlay {
+    opacity: 0;
+}
+
+.modal-enter .content, .modal-exit.modal-exit-active .content {
+    transform: translateX(calc(100% + 20px));
+}
+
+.modal-enter-active .overlay, .modal-enter-done .overlay {
+    opacity: 1;
+} 
+
+.modal-enter-active .content, .modal-enter-done .content {
+    transform: translateX(0);
+}
+
+/* News */
+.news-enter, .news-exit.news-exit-active {
+    transform: translateY(calc(100% + 10px));
+    animation: none;
+}
+
+
+.news-enter-done, .news-enter-active {
+    transform: translateY(0)!important;
+    transition-duration: .6s;
+    animation: none;
+}
